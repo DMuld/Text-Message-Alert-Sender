@@ -22,9 +22,9 @@ def email_Alert(subject, body, to):
     msg['subject'] = subject
     msg['to'] = to
 
-    user = "ourfatherchristyouthgroup@gmail.com"                #the name of the email address
+    user = "*Enter Email Address*"                #the name of the email address
     msg['from'] = user
-    password = "etetlinywssuomnf"                               #password of the email address // has to have 2 step verification and the app password entered.
+    password = "*Enter Machine Passowrd*"                               #password of the email address // has to have 2 step verification and the app password entered.
 
     server = smtplib.SMTP("smtp.gmail.com", 587)                #this is gmails name and port
     server.starttls()
@@ -32,9 +32,9 @@ def email_Alert(subject, body, to):
     server.send_message(msg)
     server.quit()
 
-email_Alert("Quote Of The Day", output, "4026706146@vtext.com")
-email_Alert("", "Reply Stop, to opt out of automated messages.", "4026706146@vtext.com")
-#email_Alert("Quote Of The Day", output, "4023013908@messaging.sprintpcs.com")
-#email_Alert("Quote Of The Day", output, "4023013908@tmomail.net")               #change this to the email that it is wished to be sent. Can also be numbers this is specifically for Verizon
+email_Alert("Quote Of The Day", output, "*Enter Phone Number*@vtext.com")
+email_Alert("", "Reply Stop, to opt out of automated messages.", "*Enter Phone Number*@vtext.com")
+#email_Alert("Quote Of The Day", output, "*Enter Phone Number*@messaging.sprintpcs.com")
+#email_Alert("Quote Of The Day", output, "*Enter Phone Number*@tmomail.net")               #change this to the email that it is wished to be sent. Can also be numbers this is specifically for Verizon
 print(phrase.replace("Bot", "Completed"))                                             #@messaging.sprintpcs.com  @vtext.com  @tmomail.net
 input("Enter anything to exit:")
